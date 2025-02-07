@@ -11,6 +11,7 @@ int main() {
         for(int j=1;j<=i;j++){
             print("* ")
         }
+        print("\n")
     }
     return 0;
 }
