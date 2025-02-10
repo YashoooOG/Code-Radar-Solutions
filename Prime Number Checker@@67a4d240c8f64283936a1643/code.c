@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
-int isPrime(int number) {
-    if (number <= 1) return 0;
-    for (int i = 2; i <= sqrt(number); i++) {
-        if (number % i == 0) return 0;
+int isPrime(int num) {
+    if (num <= 1) return 0;
+    for (int i = 2; i <= num; i++) {
+        if (num % i == 0) return 0;
     }
     return 1;
 }
