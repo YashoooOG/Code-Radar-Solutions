@@ -15,9 +15,8 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &Sts[i].RoNum);
-        scanf(" %[^\n]s", Sts[i].name); // Use this format to read string with spaces
-        scanf("%f", &Sts[i].marks);     // Use %f for float
-    }
+        scanf(" %[^\n]s", Sts[i].name); 
+        scanf("%f", &Sts[i].marks);     
 
     for (int i = 0; i < n; i++) {
         a += Sts[i].marks;
