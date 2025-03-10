@@ -21,7 +21,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         a += Sts[i].marks;
     }
-    printf("%d"\n,a);
+    printf("%d\n",a);
     printf("Average Marks: %.2f\n", a / n);
     return 0;
 
