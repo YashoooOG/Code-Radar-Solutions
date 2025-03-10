@@ -5,7 +5,7 @@ struct Stu{
     int RoNum;
     char name[50];
     float marks;
-}
+};
 int main(){
     struct Stu Sts[100];
     int n;
