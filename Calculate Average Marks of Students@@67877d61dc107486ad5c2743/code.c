@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 struct Stu {
     int RoNum;
@@ -10,19 +9,21 @@ struct Stu {
 int main() {
     int n;
     scanf("%d", &n);
+    
     float a = 0;
-    struct Stu Sts[n];
-
+    struct Stu Sts[n]; // Ensure your compiler supports VLAs
+    
     for (int i = 0; i < n; i++) {
         scanf("%d", &Sts[i].RoNum);
-        scanf(" %[^\n]s", Sts[i].name); 
-        scanf("%f", &Sts[i].marks);     
+        scanf(" %[^\n]", Sts[i].name); // Remove 's' from the format specifier
+        scanf("%f", &Sts[i].marks);
     }
+
     for (int i = 0; i < n; i++) {
         a += Sts[i].marks;
     }
-    printf("%d\n",a);
-    printf("Average Marks: %.2f\n", a/n);
-    return 0;
 
+    printf("Average Marks: %.2f\n", a / n);
+
+    return 0;
 }
