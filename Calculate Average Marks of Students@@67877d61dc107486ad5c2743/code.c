@@ -9,7 +9,7 @@ struct Stu{
 int main(){
     int n;
     scanf("%d",&n);
-    int a=;
+    int a=0;
     struct Stu Sts[n];
     for (int i=0;i<n;i++){
         scanf("%d",&Sts[i].RoNum);
