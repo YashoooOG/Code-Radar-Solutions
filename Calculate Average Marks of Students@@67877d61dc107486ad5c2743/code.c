@@ -11,11 +11,11 @@ int main() {
     scanf("%d", &n);
     
     float a = 0;
-    struct Stu Sts[n]; // Ensure your compiler supports VLAs
+    struct Stu Sts[n]; 
     
     for (int i = 0; i < n; i++) {
         scanf("%d", &Sts[i].RoNum);
-        scanf(" %[^\n]", Sts[i].name); // Remove 's' from the format specifier
+        scanf("%s", &Sts[i].name); 
         scanf("%f", &Sts[i].marks);
     }
 
