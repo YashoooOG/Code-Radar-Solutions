@@ -9,7 +9,7 @@ struct Stu{
 int main(){
     struct Stu sts[100];
     int n;
-    scanf("%d",&n)
+    scanf("%d",&n);
     for (int i=0;i<n;i++){
         scanf("%d",&Sts[i].RoNum);
         scanf("%c",&Sts[i].name);
