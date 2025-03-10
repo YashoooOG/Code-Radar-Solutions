@@ -25,3 +25,4 @@ int main() {
     printf("Average Marks: %.2f\n", a / n);
     return 0;
 }
+}
