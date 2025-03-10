@@ -9,7 +9,7 @@ struct Stu{
 int main(){
     int n;
     scanf("%d",&n);
-    int a=0;
+    float a=0;
     struct Stu Sts[n];
     for (int i=0;i<n;i++){
         scanf("%d",&Sts[i].RoNum);
@@ -20,7 +20,6 @@ int main(){
     for (int i=0;i<n;i++){
        a += Sts[i].marks;
     }
-    printf("%d",a);
     printf("Average Marks: %.2f",a / n);
     return 0;
 }
