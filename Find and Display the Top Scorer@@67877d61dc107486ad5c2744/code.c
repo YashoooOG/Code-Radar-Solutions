@@ -17,7 +17,7 @@ int main(){
         scanf("%c",&Sts[i].name);
         scanf("%d",&o);
         Sts[i].marks = o;
-        if m<o{
+        if (m<=o){
             m=o;
         }
     }
