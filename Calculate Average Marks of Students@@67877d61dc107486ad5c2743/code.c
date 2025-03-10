@@ -14,7 +14,7 @@ int main(){
     for (int i=0;i<n;i++){
         scanf("%d",&Sts[i].RoNum);
         scanf("%c",&Sts[i].name);
-        scanf("%d",&Sts[i].marks);
+        scanf("%f",&Sts[i].marks);
     }
 
     for (int i=0;i<n;i++){
@@ -23,3 +23,4 @@ int main(){
     printf("Average Marks: %.2f",a / n);
     return 0;
 }
+
