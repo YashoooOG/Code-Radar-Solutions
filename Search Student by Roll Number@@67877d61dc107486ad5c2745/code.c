@@ -25,7 +25,7 @@ int main() {
             break;  // Exit loop after finding the desired student
         }
         else{
-            printf("Student not found")
+            printf("Student not found");
         }
     }
 
