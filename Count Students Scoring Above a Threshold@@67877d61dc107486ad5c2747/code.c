@@ -10,14 +10,13 @@ int main(){
     struct Stu Sts[100];
     int n;
     scanf("%d",&n);
-    int ma;
+    float ma;
     for (int i=0;i<n;i++){
         scanf("%d",&Sts[i].RoNum);
         scanf("%c",&Sts[i].name);
         scanf("%d",&Sts[i].marks);
     }
-    scanf("%d",&ma);
-    printf("%d",ma);
+    scanf("%f",&ma);
     int k=0;
     for (int i=0;i<n;i++){
         if (Sts[i].marks>ma){
