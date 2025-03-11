@@ -32,7 +32,7 @@ int main() {
 
     printf("Basic: %d Users, Revenue: %.2f; ", basic_users, basic_revenue);
     printf("Standard: %d Users, Revenue: %.2f; ", standard_users, standard_revenue);
-    printf("Premium: %d Users, Revenue: %.2f;\n", premium_users, premium_revenue);
+    printf("Premium: %d Users, Revenue: %.2f\n", premium_users, premium_revenue);
 
     return 0;
 }
