@@ -23,6 +23,6 @@ int main(){
             k++;
         }
     }
-    printf("Count of students scoring above %.2f: %d",ma,k);
+    printf("Count of students scoring above %.2f: %d", ma ,k);
     return 0;
 }
