@@ -1,32 +1,39 @@
 #include <stdio.h>
 #include <string.h>
 
-struct Stu {
-    int RoNum;
-    char name[50];
+struct Student {
+    int roll_number;
+    char name[100];
     float marks;
 };
 
-int main() {
-    struct Stu Sts[100];
-    int n, searchRollNum;
-    scanf("%d", &n);
+struct Student find_student_by_roll_number(struct Student students[], int n, int roll_number_to_search) {
     for (int i = 0; i < n; i++) {
-        scanf("%d", &Sts[i].RoNum);
-        scanf(" %[^\n]", Sts[i].name);  // Reads the string including spaces
-        scanf("%f", &Sts[i].marks);
+        if (students[i].roll_number == roll_number_to_search) {
+            return students[i];
+        }
+    }
+    struct Student empty_student = {0, "", 0.0};
+    return empty_student;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    struct Student students[n];
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d %s %f", &students[i].roll_number, students[i].name, &students[i].marks);
     }
 
-    scanf("%d", &searchRollNum);
+    int roll_number_to_search;
+    scanf("%d", &roll_number_to_search);
 
-    for (int i = 0; i < n; i++) {
-        if (Sts[i].RoNum == searchRollNum) {
-            printf("Roll Number: %d, Name: %s, Marks: %.2f\n", Sts[i].RoNum, Sts[i].name, Sts[i].marks);
-            break;  // Exit loop after finding the desired student
-        }
-        else{
-            printf("Student not found");
-        }
+    struct Student student = find_student_by_roll_number(students, n, roll_number_to_search);
+    if (student.roll_number != 0) {
+        printf("Roll Number: %d, Name: %s, Marks: %.2f\n", student.roll_number, student.name, student.marks);
+    } else {
+        printf("Student not found\n");
     }
 
     return 0;
