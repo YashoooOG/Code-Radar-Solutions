@@ -17,6 +17,7 @@ int main(){
         scanf("%d",&Sts[i].marks);
     }
     scanf("%d",&ma);
+    printf("%d",ma);
     int k=0;
     for (int i=0;i<n;i++){
         if (Sts[i].marks>ma){
