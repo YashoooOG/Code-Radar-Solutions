@@ -12,7 +12,6 @@ int main() {
     int N;
     float total_marks = 0;
     
-    printf("Enter the number of students: ");
     scanf("%d", &N);
     
     struct Student students[N];
