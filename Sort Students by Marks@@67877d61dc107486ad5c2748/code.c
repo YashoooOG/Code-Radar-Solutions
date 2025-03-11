@@ -1,51 +1,34 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-typedef struct {
-    int rollNumber;
-    char name[50];
+struct Student {
+    int roll;
+    char name[20];
     float marks;
-} Student;
-
-int compare(const void *a, const void *b) {
-    float marksA = ((Student*)a)->marks;
-    float marksB = ((Student*)b)->marks;
-    return (marksB > marksA) - (marksB < marksA);
-}
-
-void inputStudents(Student students[], int n) {
-    for(int i = 0; i < n; i++) {
-        printf("Enter details for student %d\n", i + 1);
-        printf("Roll Number: ");
-        scanf("%d", &students[i].rollNumber);
-        printf("Name: ");
-        scanf("%s", students[i].name);
-        printf("Marks: ");
-        scanf("%f", &students[i].marks);
-    }
-}
-
-void printStudents(Student students[], int n) {
-    for(int i = 0; i < n; i++) {
-        printf("Roll Number: %d, Name: %s, Marks: %.2f\n", students[i].rollNumber, students[i].name, students[i].marks);
-    }
-}
+};
 
 int main() {
     int n;
-    printf("Enter the number of students: ");
     scanf("%d", &n);
+    
+    struct Student students[n];
 
-    Student *students = (Student*)malloc(n * sizeof(Student));
+    for (int i = 0; i < n; i++) {
+        scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks);
+    }
 
-    inputStudents(students, n);
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (students[i].marks < students[j].marks) {
+                struct Student temp = students[i];
+                students[i] = students[j];
+                students[j] = temp;
+            }
+        }
+    }
 
-    qsort(students, n, sizeof(Student), compare);
-
-    printf("\nSorted student details by marks (descending order):\n");
-    printStudents(students, n);
-
-    free(students);
+    for (int i = 0; i < n; i++) {
+        printf("Roll Number: %d, Name: %s, Marks: %.2f\n", students[i].roll, students[i].name, students[i].marks);
+    }
 
     return 0;
 }
