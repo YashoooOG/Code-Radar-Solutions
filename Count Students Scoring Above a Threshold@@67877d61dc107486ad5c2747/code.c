@@ -1,31 +1,28 @@
 #include <stdio.h>
+#include <string.h>
 
-int main() {
-    int n, count = 0;
-    float threshold;
-
-    // Input: Number of students
-    scanf("%d", &n);
-
-    // Variables to store student data
-    int roll;
+struct Stu{
+    int RoNum;
     char name[50];
     float marks;
-
-    // Input: Student data
-    for (int i = 0; i < n; i++) {
-        scanf("%d %s %f", &roll, name, &marks);
-        // Count students scoring above the threshold
-        if (marks > threshold) {
-            count++;
+};
+int main(){
+    struct Stu Sts[100];
+    int n;
+    scanf("%d",&n);
+    int ma;
+    for (int i=0;i<n;i++){
+        scanf("%d",&Sts[i].RoNum);
+        scanf("%c",&Sts[i].name);
+        scanf("%d",&Sts[i].marks);
+    }
+    scanf("%d",&ma);
+    int k=0;
+    for (int i=0;i<n;i++){
+        if Sts[i].marks>ma{
+            k++;
         }
     }
-
-    // Input: Threshold value
-    scanf("%f", &threshold);
-
-    // Output: Count of students scoring above the threshold
-    printf("Count of students scoring above %.2f: %d\n", threshold, count);
-
+    printf("Count of students scoring above %.2f: %d",ma,k);
     return 0;
 }
