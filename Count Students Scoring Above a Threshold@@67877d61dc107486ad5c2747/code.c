@@ -18,7 +18,6 @@ int main(){
         scanf("%f", &Sts[i].marks);
     }
     scanf("%f", &m);
-    printf("%.2f\n", m);
 
     int k = 0;
     for (int i = 0; i < n; i++){
