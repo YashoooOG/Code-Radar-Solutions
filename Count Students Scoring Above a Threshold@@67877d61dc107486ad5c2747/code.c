@@ -19,7 +19,7 @@ int main(){
     scanf("%d",&ma);
     int k=0;
     for (int i=0;i<n;i++){
-        if Sts[i].marks>ma{
+        if (Sts[i].marks>ma){
             k++;
         }
     }
