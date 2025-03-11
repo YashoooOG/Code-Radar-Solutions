@@ -7,7 +7,7 @@ struct Student {
 };
 
 char getGrade(float marks) {
-    if (marks >= 80) return 'A';
+    if (marks >= 85) return 'A';
     if (marks >= 70) return 'B';
     return 'C';
 }
