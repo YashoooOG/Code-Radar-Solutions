@@ -11,6 +11,6 @@ int main() {
         if (name[i] == 'a' ||name[i] == 'e' ||name[i] == 'i' ||name[i] == 'o' ||name[i] == 'u' ) count++;
     }
 
-    printf("Total a's: %d\n", count);
+    printf("%d\n", count);
     return 0;
 }
