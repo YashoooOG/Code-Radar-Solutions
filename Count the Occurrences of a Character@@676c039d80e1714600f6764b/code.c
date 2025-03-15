@@ -5,6 +5,7 @@ int main() {
     int count = 0;
 
     scanf("%[^\n]", str);
+    getchar(); 
     scanf("%c", &ch);
 
     for (int i = 0; str[i] != '\0'; i++) {
