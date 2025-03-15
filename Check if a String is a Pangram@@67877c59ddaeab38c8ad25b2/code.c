@@ -5,7 +5,6 @@ int main() {
     char str[1000];
     int letters[26] = {0}, i;
 
-    printf("Enter a string: ");
     scanf("%[^\n]", str); 
 
     for (i = 0; str[i] != '\0'; i++) {
