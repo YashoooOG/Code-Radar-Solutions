@@ -3,8 +3,10 @@
 
 int main() {
     char str[100];
-    fgets(str);
+    scanf(" %[^\n]", str); // Reads the whole line including spaces
 
-    printf("%lu\n", strlen(str));
+    int length = strlen(str); // Get total length including spaces
+
+    printf("%d\n", length);
     return 0;
 }
