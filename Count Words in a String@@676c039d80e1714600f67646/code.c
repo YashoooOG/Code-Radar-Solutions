@@ -1,14 +1,13 @@
 #include <stdio.h>
-#include <string.h> 
 
 int main() {
-    char input[1000];
-    int count = 0;
+    char str[1000];
+    int count = 1;
 
-    fgets(input, sizeof(input), stdin);
+    fgets(str, sizeof(str), stdin);
 
-    for (int i = 0; input[i] != '\0'; i++) {
-        if (input[i] == ' ') {
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ') {
             count++;
         }
     }
