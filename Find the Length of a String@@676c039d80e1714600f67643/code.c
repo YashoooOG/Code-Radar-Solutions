@@ -1,13 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    char str[1000];
-    int length = 0;
+    char str[100];
+    scanf("%s", str); 
 
-    scanf("%s", str);  // Read a single word
-
-    while (str[length])  // Count characters until null terminator
-        length++;
+    int length = strlen(str);
 
     printf("%d\n", length);
     return 0;
