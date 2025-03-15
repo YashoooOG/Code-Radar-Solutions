@@ -1,11 +1,17 @@
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-    char str[100];
-    scanf("%s", str); 
+    char str[1000];
+    int length = 0;
 
-    int length = strlen(str);
+    if (!fgets(str, sizeof(str), stdin)) {
+        printf("0\n");
+        return 0;
+    }
+
+    while (str[length] != '\0' && str[length] != '\n') {
+        length++;
+    }
 
     printf("%d\n", length);
     return 0;
