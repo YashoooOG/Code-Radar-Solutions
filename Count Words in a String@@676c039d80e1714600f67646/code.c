@@ -4,14 +4,14 @@ int main() {
     char input[1000];
     int count = 0;
 
-    gets(input); 
+    scanf("%s", input);  
 
-    for(int i = 0; input[i] != '\0'; i++) {
-        if(input[i] == ' ') {
+    for (int i = 0; input[i] != '\0'; i++) {
+        if (input[i] == ' ') {
             count++;
         }
     }
 
-    printf("%d", count); 
+    printf("%d\n", count);
     return 0;
 }
