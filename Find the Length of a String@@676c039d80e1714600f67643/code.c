@@ -3,10 +3,8 @@
 
 int main() {
     char str[100];
-    scanf("%s", str); 
+    gets(str);
 
-    int length = strlen(str);
-
-    printf("%d\n", length);
+    printf("%lu\n", strlen(str));
     return 0;
 }
