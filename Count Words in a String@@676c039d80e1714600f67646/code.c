@@ -4,7 +4,7 @@ int main() {
     char str[1000];
     int count = 1;
 
-    fgets(str, sizeof(str), stdin);
+    scanf("%[^\n]", str);
 
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == ' ') {
