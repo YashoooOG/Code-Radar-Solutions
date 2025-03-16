@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-int countTrailingZeros(int num) {
-    if (num == 0) return 32;
-    
-    int count = 0;
-    
+int main() {
+    int num, count = 0;
+    scanf("%d", &num);
+
+    if (num == 0) {
+        printf("32\n");
+        return 0;
+    }
+
     while ((num & 1) == 0) {
         count++;
         num >>= 1;
     }
 
-    return count;
-}
-
-int main() {
-    int num;
-    scanf("%d", &num);
-    printf("%d\n", countTrailingZeros(num));
+    printf("%d\n", count);
     return 0;
+}
