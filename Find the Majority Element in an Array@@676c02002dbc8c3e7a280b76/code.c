@@ -1,4 +1,4 @@
-// Your code here...a#include <stdio.h>
+#include <stdio.h>
 
 int main() {
     int n;
