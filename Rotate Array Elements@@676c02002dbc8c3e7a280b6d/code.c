@@ -39,4 +39,9 @@ int main() {
         end--;
     }
     
-    for (int i = 0; i < N;
+    for (int i = 0; i < N; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    return 0;
+}
