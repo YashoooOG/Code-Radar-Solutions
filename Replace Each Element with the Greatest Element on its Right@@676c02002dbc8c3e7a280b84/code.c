@@ -3,16 +3,21 @@
 int main() {
     int n;
     scanf("%d", &n);
-    int arr[n], freq[1001] = {0}, min = 1001, maxFreq = 0;
-    
+    int arr[n];
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
-        freq[arr[i]]++;
-        if (freq[arr[i]] > maxFreq || (freq[arr[i]] == maxFreq && arr[i] < min)) {
-            maxFreq = freq[arr[i]];
-            min = arr[i];
+    }
+    int maxRight = -1;
+    for (int i = n - 1; i >= 0; i--) {
+        int temp = arr[i];
+        arr[i] = maxRight;
+        if (temp > maxRight) {
+            maxRight = temp;
         }
     }
-    printf("%d\n", min);
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
     return 0;
 }
