@@ -8,6 +8,7 @@ int main() {
     for (i = 0; i < n; i++) {
         sum = 0;
         num = arr[i];
+        if (num < 0) num = -num; // Handle negative numbers
         while (num > 0) {
             sum += num % 10;
             num /= 10;
