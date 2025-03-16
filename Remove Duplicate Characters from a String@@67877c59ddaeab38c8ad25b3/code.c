@@ -16,7 +16,7 @@ int main() {
     }
     result[index] = '\0'; 
 
-    printf(" %s\n", result);
+    printf("%s\n", result);
 
     return 0;
 }
