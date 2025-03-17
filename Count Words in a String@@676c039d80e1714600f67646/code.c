@@ -1,14 +1,19 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    char str[1000];
+    char str[500];  
+    scanf(" %[^\n]", str);  
     int count = 0;
+    char *token= strtok(str, " ");
 
-    scanf("%[^\n]", str); // Read the entire line of input
-    for (int i = 0; str[i] != '\0'; i++) { // Check for null terminator
-        count++; // Increment count for each character
+   
+    while (token != NULL) {
+        count++;  
+        token = strtok(NULL, " ");
     }
 
-    printf("%d\n", count); // Print the character count
+    printf("%d\n", count);
+
     return 0;
 }
