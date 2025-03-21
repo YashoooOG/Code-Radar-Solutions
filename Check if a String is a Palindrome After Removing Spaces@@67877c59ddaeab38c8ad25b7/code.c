@@ -5,8 +5,6 @@
 int main() {
     char str[100], cleanStr[100], reversedStr[100];
     int i, j = 0, len;
-
-    printf("Enter a string: ");
     scanf("%[^\n]", str); 
 
     for (i = 0; str[i] != '\0'; i++) {
