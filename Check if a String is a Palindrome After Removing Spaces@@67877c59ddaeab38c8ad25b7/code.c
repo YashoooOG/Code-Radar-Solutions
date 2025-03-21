@@ -6,8 +6,8 @@ int main() {
     char str[100], cleanStr[100], reversedStr[100];
     int i, j = 0, len;
 
-    fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0';
+    printf("Enter a string: ");
+    scanf("%[^\n]", str); 
 
     for (i = 0; str[i] != '\0'; i++) {
         if (str[i] != ' ') {
