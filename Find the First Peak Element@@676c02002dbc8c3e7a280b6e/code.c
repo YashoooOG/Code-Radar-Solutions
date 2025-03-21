@@ -9,10 +9,10 @@ int main() {
         scanf("%d", &arr[i]);
     }
     
-    if (N == 1) {
-        printf("%d\n", arr[0]);
-        return 0;
-    }
+    // if (N == 1) {
+    //     printf("%d\n", arr[0]);
+    //     return 0;
+    // }
 
     if (arr[0] > arr[1]) {
         printf("%d\n", arr[0]);
