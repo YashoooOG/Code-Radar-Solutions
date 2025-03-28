@@ -6,6 +6,6 @@ char  caesarCipher(char message[],int shift,char encrypted[100]){
     for(int i=0;i<n;i++){
         message[i]=message[i]+shift;
     }
-    return message;
+    return char;
 }
 
