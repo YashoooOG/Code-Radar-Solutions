@@ -24,6 +24,6 @@ int mostPlayedGame(int games[1000],int n){
             ans=i;
         }
     }
-    return ans-1;
+    return ans;
 
 }
