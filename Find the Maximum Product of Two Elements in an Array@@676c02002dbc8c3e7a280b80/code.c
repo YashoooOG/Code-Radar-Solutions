@@ -32,10 +32,10 @@ int main() {
         }
     }
     if (arr[0]*arr[1]>arr[n-2]*arr[n-1]){
-        printf("%d",arr[0]*arr[1])
+        printf("%d",arr[0]*arr[1]);
     }
     else{
-        printf("%d",arr[n-2]*arr[n-1])
+        printf("%d",arr[n-2]*arr[n-1]);
     }
     return 0;
     }
