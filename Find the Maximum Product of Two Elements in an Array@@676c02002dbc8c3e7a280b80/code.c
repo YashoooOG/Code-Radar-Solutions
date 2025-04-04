@@ -16,7 +16,7 @@ int main() {
     // printf("%d\n", max1 * max2);
     // return 0;
     int n, temp;
-    int arr[];
+    int arr[n];
     scanf("%d", &n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
