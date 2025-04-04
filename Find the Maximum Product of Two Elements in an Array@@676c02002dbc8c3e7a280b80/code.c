@@ -38,4 +38,5 @@ int main() {
         printf("%d",arr[n-2]*arr[n-1])
     }
     return 0;
+    }
 }
